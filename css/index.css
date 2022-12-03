@@ -30,8 +30,52 @@ body {
   position: fixed; 
   width: 100%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.logo {
+  width: 100px;
+  background-color: aquamarine;
+  height: 32px;
+}
+
+.search-bar{
+  display: inline-block;
+  background-color: forestgreen;
+  max-width: 600px;
+  width: 100%;
+  height: 32px;
+}
+
+/* display: flow-root 사용! */
+.header-menu {
+  display: flow-root;
+}
+
+.group {
+  float: left;
+  height: 32px;
+  margin: 0 12px;
+}
+
+.group1 {
+  width: 120px;
+  background-color: wheat;
+
+}
+.group2 {
+  width: 120px;
+  background-color: gray;
+}
+.group3 {
+  width: 40px;
+  background-color: palevioletred;
+}
+
+
+/* nav 영역 */
 /* height 100% 말고 더 좋은 방법? strech? */
 nav {
   position: fixed;
