@@ -126,7 +126,7 @@ nav {
   position: fixed;
   width: 300px;
   background-color: #fff;
-  height: 100%;
+  height: calc(100% - 48px);
   /* border: #000 solid 5px; */
   top: 48px;
 }
@@ -149,13 +149,49 @@ nav .title {
   height: 34px;
 }
 
-.nav-group p{
-  margin-left: 10px;
+.feed-icon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-right: 8px;
 }
 
-.popular p{
-  margin-left: 13px;
+.topic-group p {
+  padding-left: 4px;
+  font-weight: 400;
+  font-size: 15px;
 }
+
+nav footer {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+  padding: 12px 28px;
+  color: #212121;
+}
+
+footer p {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+  background-color: #0079d2;
+  color: #fff;
+  width: 100%;
+  height: 36px;
+  border-radius: 18px/18px;
+  font-weight: 600;
+}
+
+
 
 
 /* 마진을 쓰면 헤더도 같이 내려오는 이유? (fixed 가 다른 sibling의 마진에 영향을 받음??) */
