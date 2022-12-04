@@ -9,23 +9,66 @@
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
   <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://kit.fontawesome.com/14670f45cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="head">
     <h1 class="logo">
-      <a href="/index.html">logo</a>
+      <a href="/index.html">
+        <img src="assets/Reddit-Logo.png" alt='레딧' width="96" height="54"/>
+      </a>
     </h1>
     <section class="search-bar">
-      searchbar
+      <i class="fa-solid fa-magnifying-glass fa-lg" style= "color : #999999"></i>
+        <!-- 인풋으로 바꿔야함 -->
+        <div class="searchInput">Search Reddit</div>        
     </section>
     <section class="header-memu">
-      <div class="group group1">회원가입</div>
-      <div class="group group2">로그인</div>
-      <div class="group group3">icon</div>
+      <div class="group group1">
+        <div>
+          Sign Up
+        </div>
+      </div>
+      <div class="group group2">
+        <div>
+          Log In
+        </div>
+      </div>
+      <div class="group group3">
+        <i class="fa-regular fa-user fa-lg" style= "color : #999999"></i>
+        <i class="fa-solid fa-chevron-down" style= "color : #999999"></i>
+      </div>
     </section>
   </header>
   <nav>
-    nav
+    <section class="feeds">
+      <div class="title">
+        <p>FEEDS</p>
+      </div>
+      <div class="nav-group home">
+        <i class="fa-solid fa-house" style= "font-size: 20px"></i>
+        <p>Home</p>
+      </div>
+      <div class="nav-group popular">
+        <i class="fa-solid fa-fire fa-lg" style= "font-size: 20px; margin-left: 2px;"></i>
+        <p>Popular</p>
+      </div>
+    </section>
+    <section class="recent">
+      <div class="title">
+        <p>RECENT</p>
+      </div>
+      <div class="nav-group home">
+        <i class="fa-solid fa-house" style="font-size: 20px"></i>
+        <p>Home</p>
+      </div>
+      <div class="nav-group popular">
+        <i class="fa-solid fa-fire fa-lg" style="font-size: 20px; margin-left: 2px;"></i>
+        <p>Popular</p>
+      </div>
+    </section>
+    <section class="topics"></section>
+    <footer></footer>
   </nav>
   <section class="main-section">
     <main>
