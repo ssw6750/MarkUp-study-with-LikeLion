@@ -304,11 +304,55 @@ main .banner {
 
 main section {
   min-height: 1000px;
-  background-color: aqua;
   width: 640px;
   display: inline-block;
   padding: 8px;
 }
+
+.sort-bar {
+  height: 60px;
+  background: #fff;
+  border-radius: 4px;
+  border: #c4c4c4 solid 1px;
+  display: flex;
+  align-items: center;
+}
+
+.sort-bar button {
+  background: inherit;
+  color: #868a8d;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  height: 32px;
+  margin-left: 8px;
+  border-radius: 16px;
+  padding: 0 12px;
+
+  /* 첫번쨰 버튼의 align-items: center 적용이 약간 이상함.. 아이콘 넣으면 약간 내려감*/
+  line-height: 32px;
+}
+
+.sort-bar .selected {
+  color: #0079d2;
+  background-color: #f6f7f9;
+}
+
+.sort-bar button:nth-child(5) {
+  padding: 2px;
+}
+
+/* .sort-bar button:last-child {
+  color: #000;
+  float: right;
+} */
+
+/* .sort-dropdown 로는 적용이 안됨 why..? */
+/* margin 주기 싦은데 걍 flex 영역 하나 더만들어?? */
+.sort-bar .sort-dropdown {
+  margin-left: 160px;
+}
+
 
 main aside {
   background-color: antiquewhite;
