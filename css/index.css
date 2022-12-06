@@ -179,7 +179,7 @@ footer p {
   margin-top: 12px;
 }
 
-footer div {
+.nav-footer div {
   display: flex;
   justify-content: center;
   padding: 0;
@@ -302,7 +302,7 @@ main .banner {
   text-overflow: ellipsis;
 }
 
-main section {
+main .posts {
   min-height: 1000px;
   width: 640px;
   display: inline-block;
@@ -342,10 +342,6 @@ main section {
   padding: 2px;
 }
 
-/* .sort-bar button:last-child {
-  color: #000;
-  float: right;
-} */
 
 /* .sort-dropdown 로는 적용이 안됨 why..? */
 /* margin 주기 싦은데 걍 flex 영역 하나 더만들어?? */
@@ -353,10 +349,105 @@ main section {
   margin-left: 160px;
 }
 
+.post {
+  min-height: 440px;
+  background: #fff;
+  border-radius: 4px;
+  border: #c4c4c4 solid 1px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.vote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fb;
+  width: 40px;
+  color: #868a8d;
+}
+
+.vote h {
+  font-size: 12px;
+  color: #212121;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+ .post-section {
+  /* background-color: violet; */
+  width: 600px;
+}
+
+.post-section header {
+  height: 36px;
+  display: flex;
+  position: relative;
+}
+
+.post-source .user-img {
+  top: 7px;
+  left: 4px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  /* 백그라운드 단축표기법 */
+  background: #fff url(../assets/bug01.jpg) no-repeat center center / cover;
+
+}
+
+.post-source div{
+  top: 7px;
+  left: 4px;
+  position: absolute;
+  height: 22px;
+  left: 32px;
+}
+
+.post-source div p:first-child{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post-source div p:nth-child(2) {
+  display: inline-block;
+  color: #868a8d;
+  font-size: 12px;
+}
+
+.post-letter {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 4px;
+}
+
+.post-img {
+  background: gray url(../assets/forest.jpg) center center/ cover;
+  height: 320px;
+}
+
+.post-footer{
+  height: 40px;
+  display: flex;
+}
+
+.post-footer div{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #868a8d;
+  line-height: 40px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
 
 main aside {
   background-color: antiquewhite;
   display: inline-block;
-  width: 376px;
+  width: 300px;
   min-height: 400px;
 }
