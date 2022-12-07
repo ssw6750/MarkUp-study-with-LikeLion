@@ -445,9 +445,74 @@ main .posts {
   align-items: center;
 }
 
+.main-layout{
+  display: flex;
+}
+
 main aside {
-  background-color: antiquewhite;
+  width: 100%;
   display: inline-block;
-  width: 300px;
   min-height: 400px;
+}
+
+.side-bar {
+  background: #fff;
+  border-radius: 3px;
+  border: #c4c4c4 solid 1px;
+  margin: 68px 4px 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar div {
+  color: #1d1c1a;
+  border-bottom: #e7e7e7 1px solid;
+  font-size: 10px;
+  font-weight: 600;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  justify-content: space-between;
+}
+
+/* .side-bar div:last-child {
+  border: 0;
+} */
+
+.side-env-bar {
+  background: #fff;
+  border-radius: 3px;
+  border: #c4c4c4 solid 1px;
+  margin: 16px 4px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 400;
+  color: #1d1c1a;
+}
+
+.side-env-bar section {
+  padding: 0px 12px;
+  margin-top: 4px ;
+}
+
+/* 마지막 섹션은 없어야함 (미세하게 겹침) */
+.side-env-bar section::after {
+  content: "";
+  border-top: #e7e7e7 1px solid;
+  display: block;
+  margin-top: 4px;
+}
+
+.side-env-bar section a {
+  /* inline-flex 이거 뭐임 */
+  display: inline-flex; 
+  width: 49%;
+  margin: 6px 0px;
+}
+
+/* css 우선순위 점수 개념 */
+.side-env-bar section .copyright {
+  width: 100%;
 }
