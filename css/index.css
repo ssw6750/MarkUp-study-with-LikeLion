@@ -38,6 +38,7 @@ body {
 }
 
 .logo {
+  min-width: 100px;
   margin-left: 20px;
   width: 100px;
   height: 32px;
@@ -65,36 +66,49 @@ img {
   padding-left: 16px;
 }
 
+.search-bar:hover {
+  background-color: #fff;
+  border: #0079d2 solid 1px;
+}
+
 .searchInput {
   margin-left: 6px;
   color: #999999;
   font-size: 14px;
-
+  border: 0;
+  background-color: inherit;
 }
 
+.searchInput:focus {outline: none;}
+
 /* display: flow-root 사용! */
-.header-menu {
+.header-memu {
   display: flow-root;
+  min-width: 370px;
+  /* background-color: sandybrown; */
 }
 
 .group {
   float: left;
   height: 32px;
   margin: 0 12px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .group1 {
   width: 120px;
   border: #0079d2 solid 1px;
   border-radius: 16px/16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.group1 div {
   color: #0079d2;
   font-weight: 600;
+}
+
+.group1:hover {
+  background-color: #f6f7f9;
 }
 
 .group2 {
@@ -102,22 +116,23 @@ img {
   background-color: #0079d2;
   width: 120px;
   border-radius: 16px/16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.group2 div {
   color: #fff;
   font-weight: 600;
 }
 
+.group2:hover {
+  background-color: #118ce4;
+}
+
+
 .group3 {
   width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 24px;
+  padding: 0 24px;
+}
+
+.group3:hover {
+  border: #e2e4e9 solid 1px;
 }
 
 
@@ -128,6 +143,7 @@ nav {
   width: 270px;
   background-color: #fff;
   height: calc(100% - 48px);
+  min-height: 800px;
   /* border: #000 solid 5px; */
   top: 48px;
 }
@@ -148,6 +164,11 @@ nav .title {
   color: #1d1c1a;
   font-size: 14px;
   height: 34px;
+  cursor: pointer;
+}
+
+.nav-group:hover {
+  background-color: #f6f7f9;;
 }
 
 .feed-icon {
@@ -157,6 +178,15 @@ nav .title {
   justify-content: center;
   padding: 0;
   margin-right: 8px;
+}
+
+.topic-group {
+  cursor: pointer;
+}
+
+.topic-group:hover {
+  background-color: #f6f7f9;
+  ;
 }
 
 .topic-group p {
@@ -190,9 +220,12 @@ footer p {
   height: 36px;
   border-radius: 18px/18px;
   font-weight: 600;
+  cursor: pointer;
 }
 
-
+.nav-footer div:hover {
+  background-color: #118ce4;
+}
 
 
 /* 마진을 쓰면 헤더도 같이 내려오는 이유? (fixed 가 다른 sibling의 마진에 영향을 받음??) */
@@ -230,6 +263,10 @@ main .banner {
   font-size: 14px;
   font-weight: 600;
 
+}
+
+.img-articles{
+  cursor: pointer;
 }
 
 .img-articles article{
@@ -333,6 +370,10 @@ main .posts {
   line-height: 32px;
 }
 
+.sort-bar button:hover {
+  background-color: rgb(230, 230, 230);
+}
+
 .sort-bar .selected {
   color: #0079d2;
   background-color: #f6f7f9;
@@ -346,7 +387,7 @@ main .posts {
 /* .sort-dropdown 로는 적용이 안됨 why..? */
 /* margin 주기 싦은데 걍 flex 영역 하나 더만들어?? */
 .sort-bar .sort-dropdown {
-  margin-left: 160px;
+  margin-left: 156px;
 }
 
 .post {
@@ -356,6 +397,7 @@ main .posts {
   border: #c4c4c4 solid 1px;
   display: flex;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .vote {
@@ -372,6 +414,14 @@ main .posts {
   color: #212121;
   font-weight: 600;
   margin: 4px 0;
+}
+
+.vote i:first-child:hover {
+  color: #f44336;
+}
+
+.vote i:last-child:hover {
+  color: #2196f3;
 }
 
  .post-section {
@@ -395,7 +445,6 @@ main .posts {
   background: #fff;
   /* 백그라운드 단축표기법 */
   background: #fff url(../assets/bug01.jpg) no-repeat center center / cover;
-
 }
 
 .post-source div{
@@ -412,10 +461,15 @@ main .posts {
   font-weight: 600;
 }
 
+.post-source div p:first-child:hover{
+  text-decoration: underline;
+}
+
 .post-source div p:nth-child(2) {
   display: inline-block;
   color: #868a8d;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .post-letter {
@@ -440,9 +494,15 @@ main .posts {
   font-weight: 600;
   color: #868a8d;
   line-height: 40px;
-  margin-right: 12px;
+  margin: 1px 2px;
+  padding: 0 8px;
   display: flex;
   align-items: center;
+  border-radius: 2px;
+}
+
+.post-footer div:hover{
+  background-color: rgb(230, 230, 230);
 }
 
 .main-layout{
@@ -474,6 +534,7 @@ main aside {
   align-items: center;
   padding-left: 12px;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 /* .side-bar div:last-child {
@@ -510,6 +571,7 @@ main aside {
   display: inline-flex; 
   width: 49%;
   margin: 6px 0px;
+  cursor: pointer;
 }
 
 /* css 우선순위 점수 개념 */
