@@ -126,9 +126,8 @@ img {
 
 
 .group3 {
-  width: 40px;
+  width: 44px;
   margin-right: 24px;
-  padding: 0 24px;
 }
 
 .group3:hover {
@@ -197,7 +196,7 @@ nav .title {
 
 nav footer {
   position: absolute;
-  height: 200px;
+  height: 220px;
   width: 100%;
   bottom: 0;
   padding: 12px 28px;
@@ -205,6 +204,7 @@ nav footer {
 }
 
 footer p {
+  font-size: 15px;
   display: inline-block;
   margin-top: 12px;
 }
@@ -217,10 +217,11 @@ footer p {
   background-color: #0079d2;
   color: #fff;
   width: 100%;
-  height: 36px;
-  border-radius: 18px/18px;
+  height: 44px;
+  border-radius: 22px;
   font-weight: 600;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .nav-footer div:hover {
