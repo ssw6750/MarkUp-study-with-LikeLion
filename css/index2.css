@@ -48,7 +48,7 @@ header {
 
 .header-container{
   /* 푸타 레이아웃(피그마 수치) 크기에 맟춤 */
-  width: 1673px;
+  width: 1900px;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -277,22 +277,28 @@ footer {
   height: 400px;
   display: flex;
   justify-content: center;
-  padding-top: 45px;
   position: relative;
+  
 }
 
 footer > div {
-  width: 1673px;
-  height: 296px;
+  max-width: 2000px;
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative;
+  padding: 0 50px;
+  /* padding-top :50px; */
+  /* 왜 이게 fixed에 영향을 주는거야 --!!!!!!!!!!!!!!! */
 }
 
+
 footer section {
+  margin-top: 50px;
   display: flex;
   flex-flow: column wrap;
   color: #fff;
-  width: 340px;
+  width: 20%;
 }
 
 footer section .title{
@@ -324,8 +330,8 @@ footer section li{
 
 .copyright-warraper{
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 60px;
   width: 253px;
   height: 84px;
   color: #fff;
@@ -345,15 +351,15 @@ footer section li{
 .help {
   background: #4C5FD5;
   color: #fff;
-  width: 107px;
+  width: 140px;
   height: 46px;
   border-radius: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 17px;
-  bottom: 10px;
+  right: 20px;
+  bottom: 20px;
 }
 
 .help p{
@@ -427,7 +433,102 @@ footer section li{
     margin: 4px 0px;
   }
 
+
+
+    .copyright-warraper {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 253px;
+      height: 84px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 140%;
+    }
+
+        footer {
+          background: #000;
+          height: 600px;
+          display: flex;
+          justify-content: flex-start;
+          position: relative;
+          width: 100%;
+    
+        }
+    
+        footer>div {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-flow: row wrap;
+          position: relative;
+          padding: 0 10px;
+          /* padding-top :50px; */
+          /* 왜 이게 fixed에 영향을 주는거야 --!!!!!!!!!!!!!!! */
+        }
+
+                 footer section {
+                   display: flex;
+                   flex-flow: column wrap;
+                   color: #fff;
+                   width: 50%;
+                   margin-bottom: 20px;
+        
+                 }
+
+                                    .copyright-warraper {
+                                      position: absolute;
+                                      right: -320px;
+                                      bottom: 60px;
+                                      width: 253px;
+                                      height: 84px;
+                                      color: #fff;
+                                      font-size: 20px;
+                                      line-height: 140%;
+                                    }
     /* 액티브는 나중에 구현 */
+}
+
+@media (min-width: 767px) and (max-width: 1100px) {
+  footer section {
+    display: flex;
+    flex-flow: column wrap;
+    color: #fff;
+    width: 50%;
+    margin-bottom: 20px;
+
+  }
+
+  footer {
+    background: #000;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  footer>div {
+    flex-flow: row wrap;
+    height: 70%;
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 0 50px;
+    /* padding-top :50px; */
+    /* 왜 이게 fixed에 영향을 주는거야 --!!!!!!!!!!!!!!! */
+  }
+
+  .copyright-warraper {
+    position: absolute;
+    right: 20px;
+    bottom: -120px;
+    width: 253px;
+    height: 84px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 140%;
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -448,3 +549,4 @@ footer section li{
     display: none;
    }
 }
+
