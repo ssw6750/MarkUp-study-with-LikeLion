@@ -220,7 +220,7 @@ header .sign:hover{
 }
 
 
-dl {
+dl>div {
   position: relative;
   display: inline-block;
   width: 49%;
