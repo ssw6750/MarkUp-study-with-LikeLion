@@ -1,6 +1,17 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 숨김 콘텐츠 */
+.a11y-hidden,
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+
 /* 기본 스타인 */
 *,
 *::before,
@@ -12,6 +23,10 @@
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline
 }
 
 /* 본문 스타일 */
@@ -28,10 +43,16 @@ header {
   height: 80px;
   background-color: #000;
   display: flex;
+  justify-content: center
+}
+
+.header-container{
+  /* 푸타 레이아웃(피그마 수치) 크기에 맟춤 */
+  width: 1673px;
+  display: flex;
   justify-content: space-between;
   color: white;
   align-items: center;
-  padding: 0 128px;
 }
 
 header div:first-child{
@@ -40,26 +61,57 @@ header div:first-child{
 }
 
 header .logo,
-header .title,
-header .sub-title {
-  display: inline-block;
-}
-
 header .title {
-  margin-left: 7px;
   display: inline-block;
 }
 
-header .title::after{
+/* 
+header .title::before{
   content: "|";
   margin: 0 10px;
+  pointer-events: none;
+} */
+
+header .title::before {
+  content: "";
+  margin: 0 10px;
+  height: 20px;
+  width: 1px;
+  display: inline-block;
+  background-color: #FFF;
 }
 
-header .logo p{
-  background: url("../assets2/logo.png") no-repeat center center / cover;
-  width: 36px;
+header .logo{
+  /* background: url("../assets2/logo.png") no-repeat center center / cover; */
+  width: 135px;
   height: 36px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transition: 200ms;
 }
+
+header .logo:hover{
+  filter: brightness(80%);
+  text-decoration: none;
+
+}
+
+header .logo::after{
+  padding-left: 8px;
+  display: inline-block;
+  content: "Abstract";
+}
+
+header .title{
+  margin-left: 135px;
+}
+
+/* header .logo p{
+  position: absolute;
+  width: 36px;
+  height: 36px; 
+} */
 
 header .submit-request{
   height: 50px;
@@ -68,15 +120,23 @@ header .submit-request{
   border-radius: 8px;
   background: #000;
   color: #fff;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 
 header .sign{
-  width: 117px;
+  width: 140px;
   height: 50px;
   border-radius: 8px;
+  padding: 10px 21px;
   background: #4C5FD5;
   color: #fff;
+  border: none;
+}
+
+header .sign:hover{
+  background: #fff;
+  color: #000;
+  transition: 600ms;
 }
 
 .search {
@@ -88,11 +148,14 @@ header .sign{
   padding: 74px 0 112px 0;
 }
 
-.search label{
+.search .title{
   font-size: 80px;
-  width: 603px;
+  width: 663px;
   height: 155px;
   text-align: center;
+  letter-spacing: -2px;
+  word-spacing: -8px;
+  line-height: 155px;
 }
 
 .searchInput-box {
@@ -102,18 +165,41 @@ header .sign{
   position: relative;
 }
 
+.searchInput-box:hover {
+  color: #4C5FD5;
+  border-color: #4C5FD5;
+}
+
 .search .searchInput{
   width: 718px;
   height: 66px;
-  border: #000 1px solid;
+  border: #000 0.8px solid;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 20px;
   padding: 16px;
+  box-shadow: 5px 5px 5px 2px #c7c8d7;
 }
 
-.search-arrow {
+.search .searchInput:hover,
+.search .searchInput:focus {
+  border-color: #4C5FD5;
+  outline: none;
+}
+
+/* 이미지 색상 처리 불가능 */
+/* .search-arrow {
   background: url("../assets2/arrow_forward.png") no-repeat center center / cover;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+} */
+
+/* 아이콘으로 대체 */
+.search-arrow {
   width: 24px;
   height: 24px;
   position: absolute;
@@ -134,7 +220,7 @@ header .sign{
 }
 
 
-dl > div {
+dl {
   position: relative;
   display: inline-block;
   width: 49%;
@@ -204,7 +290,18 @@ footer section ul {
 }
 
 footer section li{
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+}
+
+.contact-us{
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.contact-us .mail{
+  font-weight: 400;
 }
 
 .copyright-warraper{
@@ -215,6 +312,7 @@ footer section li{
   height: 84px;
   color: #fff;
   font-size: 20px;
+  line-height: 140%;
 }
 
 .copyright-img {
@@ -223,7 +321,7 @@ footer section li{
   height: 36px;
   position: absolute;
   left: 0;
-  top: -40px;
+  top: -60px;
 }
 
 .help {
@@ -235,7 +333,7 @@ footer section li{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   right: 17px;
   bottom: 10px;
 }

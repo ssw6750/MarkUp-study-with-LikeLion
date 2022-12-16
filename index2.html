@@ -6,116 +6,117 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개인웹사이트만들기 스터디</title>
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
   <link rel="stylesheet" href="./css/index2.css" />
   <script src="https://kit.fontawesome.com/14670f45cd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <div>
-      <a href="" class="logo" aria-level="Abstract 로고">
-        <p></p>
-      </a>
-      <a href="" class="title">Abstract</a>
-      <a href="" class="sub-title">Help Center</a>
-    </div>
-    <div>
-      <button class="submit-request">
-        <p>Submit a request</p>
-      </button>
-      <button class="sign">Sign in</button>
+    <div class="header-container">
+      <div> 
+        <h1>
+          <a href="" class="title">Help Center</a>
+        </h1>
+        <h2 class="a11y-hidden">Abstract</h2>
+        <a href="" class="logo" aria-label="Abstract 로고">
+          <img src="./assets2/logo.png" alt="Abstract 로고"/>
+        </a>
+      </div>
+      <h2 class="a11y-hidden">버튼 메뉴(잘 모르겠음)</h2>
+      <div>
+        <button class="submit-request">
+          Submit a request
+        </button>
+        <button class="sign">Sign in</button>
+      </div>
     </div>
   </header>
   <main class="main">
+    <h2 class="a11y-hidden">검색</h2>
     <div class="search">
+      <p class="title">How can we help?</p>
       <fieldset>
-        <label for="search">
-          <p>How can we help?</p>
-        </label>
+        <!-- label 대신 가능한거 맞나요..? -->
+        <legend>
+          search
+        </legend>
         <div class="searchInput-box">
           <input class="searchInput" id="search" name="search" placeholder="search">
-          <p class="search-arrow"></p>
+          <!-- <p class="search-arrow"></p> -->
+          <i class="fa-solid fa-arrow-left search-arrow "></i>
         </div>
       </fieldset>
       <!-- <p>How can we Help</p> -->
     </div>
     <div class="menu">
       <div class="menu-layout">
+        <!-- 수정필요 -->
         <dl>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
+              <dt class="desc-title">
+                <h2 class="a11y-hidden">desc-title</h2>
+                <p>Using Abstract</p>
+              </dt>
             <dd class="desc-info">
               <div class="desc-img"></div>
               <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
+                <a href="">Learn More →</a>
             </dd>
-          </div>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
-            <dd class="desc-info">
-              <div class="desc-img"></div>
-              <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
-            <dd class="desc-info">
-              <div class="desc-img"></div>
-              <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
-            <dd class="desc-info">
-              <div class="desc-img"></div>
-              <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
-            <dd class="desc-info">
-              <div class="desc-img"></div>
-              <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt class="desc-title">
-              <p>Using Abstract</p>
-            </dt>
-            <dd class="desc-info">
-              <div class="desc-img"></div>
-              <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
-              <a>
-                <p>Learn More →</p>
-              </a>
-            </dd>
-          </div>
+        </dl>
+        <dl>
+          <h2 class="a11y-hidden">desc-title</h2>
+          <dt class="desc-title">
+            <p>Using Abstract</p>
+          </dt>
+          <dd class="desc-info">
+            <div class="desc-img"></div>
+            <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="">Learn More →</a>
+          </dd>
+        </dl>
+        <dl>
+          <h2 class="a11y-hidden">desc-title</h2>
+          <dt class="desc-title">
+            <p>Using Abstract</p>
+          </dt>
+          <dd class="desc-info">
+            <div class="desc-img"></div>
+            <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="">Learn More →</a>
+          </dd>
+        </dl>
+        <dl>
+          <h2 class="a11y-hidden">desc-title</h2>
+          <dt class="desc-title">
+            <p>Using Abstract</p>
+          </dt>
+          <dd class="desc-info">
+            <div class="desc-img"></div>
+            <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="">Learn More →</a>
+          </dd>
+        </dl>
+        <dl>
+          <h2 class="a11y-hidden">desc-title</h2>
+          <dt class="desc-title">
+            <p>Using Abstract</p>
+          </dt>
+          <dd class="desc-info">
+            <div class="desc-img"></div>
+            <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="">Learn More →</a>
+          </dd>
+        </dl>
+        <dl>
+          <h2 class="a11y-hidden">desc-title</h2>
+          <dt class="desc-title">
+            <p>Using Abstract</p>
+          </dt>
+          <dd class="desc-info">
+            <div class="desc-img"></div>
+            <p class="info">Abstract lets you manage, version, and document your designs in one place.</p>
+            <a href="">Learn More →</a>
+          </dd>
         </dl>
       </div>
     </div>
@@ -123,42 +124,95 @@
   <footer>
     <div>
       <section>
-        <p class="title">Abstract</p>
+        <h2 class="a11y-hidden">Abstract</h2>
+          <p class="title">Abstract</p>
         <ul>
-          <li>Start Trial</li>
-          <li>Pricing</li>
-          <li>Download</li>
+          <li>
+            <a href="">Start Trial</a>
+          </li>
+          <li>
+            <a href="">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Download
+            </a>
+          </li>
         </ul>
       </section>
       <section>
+        <h2 class="a11y-hidden">Abstract</h2>
         <p class="title">Abstract</p>
         <ul>
-          <li>Start Trial</li>
-          <li>Pricing</li>
-          <li>Download</li>
+          <li>
+            <a href="">Start Trial</a>
+          </li>
+          <li>
+            <a href="">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Download
+            </a>
+          </li>
         </ul>
       </section>
       <section>
+        <h2 class="a11y-hidden">Abstract</h2>
         <p class="title">Abstract</p>
         <ul>
-          <li>Start Trial</li>
-          <li>Pricing</li>
-          <li>Download</li>
+          <li>
+            <a href="">Start Trial</a>
+          </li>
+          <li>
+            <a href="">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Download
+            </a>
+          </li>
         </ul>
       </section>
       <section>
+        <h2 class="a11y-hidden">Abstract</h2>
         <p class="title">Abstract</p>
         <ul>
-          <li>Start Trial</li>
-          <li>Pricing</li>
-          <li>Download</li>
+          <li>
+            <a href="">Start Trial</a>
+          </li>
+          <li>
+            <a href="">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Download
+            </a>
+          </li>
+          <li class="contact-us">
+            <h3>Contact Us</h3>
+              <p>Contact Us</p>
+            <a href="" class="mail">info@abstract.com</a>
+          </li>
         </ul>
       </section>
+
       
       <div class="copyright-warraper">
+        <h2 class="a11y-hidden">copyright</h2>
         <div class="copyright-img"></div>
         <small title="copyright">
-          © Copyright 2022 Abstract Studio Design, Inc. All rights reserved
+          © Copyright 2022
+          <br>
+          Abstract Studio Design, Inc. All rights reserved
         </small>
       </div>
     </div>
