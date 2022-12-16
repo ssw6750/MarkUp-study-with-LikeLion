@@ -53,9 +53,15 @@ header {
   justify-content: space-between;
   color: white;
   align-items: center;
+  padding: 0px 10px;
 }
 
 header div:first-child{
+  display: flex;
+  align-items: center;
+}
+
+header div:last-child {
   display: flex;
   align-items: center;
 }
@@ -145,12 +151,12 @@ header .sign:hover{
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding: 74px 0 112px 0;
+  padding: 74px 20px 112px 20px;
 }
 
 .search .title{
   font-size: 80px;
-  width: 663px;
+  max-width: 663px;
   height: 155px;
   text-align: center;
   letter-spacing: -2px;
@@ -158,9 +164,20 @@ header .sign:hover{
   line-height: 155px;
 }
 
+.search fieldset{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .searchInput-box {
   display: inline-block;
-  width: 718px;
+  max-width: 718px;
+  /* width: 718px; */
+  width: 100%;
   height: 66px;
   position: relative;
 }
@@ -171,11 +188,11 @@ header .sign:hover{
 }
 
 .search .searchInput{
-  width: 718px;
-  height: 66px;
   border: #000 0.8px solid;
   background-color: #fff;
   border-radius: 4px;
+  width: 100%;
+  height: 66px;
   font-size: 20px;
   padding: 16px;
   box-shadow: 5px 5px 5px 2px #c7c8d7;
@@ -216,7 +233,8 @@ header .sign:hover{
 }
 
 .menu .menu-layout{
-  width: 1600px;
+  width: 1700px;
+  padding: 0 50px;
 }
 
 
@@ -341,4 +359,92 @@ footer section li{
 .help p{
   font-size: 16px;
   font-weight: bold;
+}
+
+/* 걍 떄려박아서 최적화 구릴듯 */
+@media (min-width: 320px) and (max-width: 768px) {
+  dl>div {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-left: 130px;
+      margin-bottom: 100px;
+    }
+
+  .search .title {
+    font-size: 64px;
+    width: 500px;
+    height: 155px;
+    text-align: center;
+    letter-spacing: -4px;
+    word-spacing: -4px;
+    line-height: 155px;
+  }
+
+  .search {
+    background: #DADBF1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 110px 20px;
+  }
+
+  header .submit-request {
+    display: none;
+  }
+
+  header .sign {
+    display: none;
+  }
+
+  header .submit-request-i {
+    color: #fff;
+    background: #000;
+    transition: 300ms;
+  }
+
+  header .submit-request-i:hover {
+    font-size: 30px;
+  }
+
+  header .sign-i {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+  }
+
+  .sign-i .s1,
+  .sign-i .s2,
+  .sign-i .s3 {
+    width: 100%;
+    height: 4px;
+    background: #fff;    
+  }
+  .sign-i .s2 {
+    margin: 4px 0px;
+  }
+
+    /* 액티브는 나중에 구현 */
+}
+
+/* 데스크탑 디바이스 (Desktop Device) */
+@media (min-width: 769px) {
+  dl>div {
+      position: relative;
+      display: inline-block;
+      width: 49%;
+      padding-left: 130px;
+      margin-bottom: 100px;
+    }
+
+  header .submit-request-i {
+    display: none;
+  }
+
+   header .sign-i {
+    display: none;
+   }
 }
