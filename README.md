@@ -9,7 +9,7 @@
 ---
 
 - #### 작업물
-  - [Reddit Page](https://ssw6750.github.io/MarkUp-study-with-LikeLion/)
+  - [Reddit Page](https://ssw6750.github.io/MarkUp-study-with-LikeLion/index1)
 
   - [Frontend Practice / Abstract](https://ssw6750.github.io/MarkUp-study-with-LikeLion/index2)
 
