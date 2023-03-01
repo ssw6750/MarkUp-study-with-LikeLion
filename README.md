@@ -9,9 +9,9 @@
 ---
 
 - #### 작업물
-  - [Reddit Page](https://ssw6750.github.io/likeLion-studu01/)
+  - [Reddit Page](https://ssw6750.github.io/MarkUp-study-with-LikeLion/)
 
-  - [Frontend Practice / Abstract](https://ssw6750.github.io/likeLion-studu01/index2)
+  - [Frontend Practice / Abstract](https://ssw6750.github.io/MarkUp-study-with-LikeLion/index2)
 
 - #### 소감
   - ##### 페이지를 시작부터 마무리까지 스스로 작업하면서 *마크업에 대한 이해도* 를 높일 수 있었고, 나만의 마크업 패턴도 가질 수 있었다.
